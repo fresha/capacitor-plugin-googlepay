@@ -4,12 +4,12 @@ import type {
   PaymentOptions,
   PaymentDataRequest,
   PaymentData,
-} from '../types/index';
+} from '../types';
 
 export interface GooglePayPlugin {
   /**
    * Initiates a Google Pay client along with environment configuration.
-   * This function should be called once- before using the plugin.
+   * This function should be called once: before using the plugin.
    * @param paymentOptions - An object containing environment type that should be used.
    * @returns Promise<void> after the client is initialized.
    */
