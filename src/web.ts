@@ -7,7 +7,7 @@ import type {
   PaymentData,
   PaymentDataRequest,
   PaymentOptions,
-} from '../types/index';
+} from '../types';
 
 import type { GooglePayPlugin } from './definitions';
 

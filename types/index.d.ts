@@ -387,7 +387,7 @@ export interface IntermediateAddress {
    *
    * Also note: The returned postal code may vary based on the user's
    * geographic region. For Canada and United Kingdom, this contains only
-   * the first three characters. For US, the this contain the first five
+   * the first three characters. For US, this contains the first five
    * digits.
    */
   postalCode: string;
@@ -525,7 +525,7 @@ export interface DirectTokenizationParameters {
 
   /**
    * Elliptic Curve public key suitable for using with the NIST P-126
-   * curve. This public key will used to encrypt the sensitive payment
+   * curve. This public key will be used to encrypt the sensitive payment
    * method information.
    *
    * This field is required when the payment method requires encryption.
@@ -632,7 +632,7 @@ export interface CardParameters {
    * TransactionInfo.countryCode is set
    * to
    * "BR", users will be prompted to choose whether to process the
-   * transaction over a debit network or credit network and you should use
+   * transaction over a debit network or credit network, and you should use
    * this field to know which network to process the transaction with. For
    * all other markets, this field will be set to a suggestion of a card
    * network to use for processing, but you or your processor may choose
@@ -828,7 +828,7 @@ export interface TransactionInfo {
    * dialog page.
    *
    * This field is optional, but required if developer wants to show cart
-   * information. Otherwise the cart modal dialog will not be rendered
+   * information. Otherwise, the cart modal dialog will not be rendered
    * even if transactionInfo.displayItems is set.
    */
   totalPriceLabel?: string | undefined;
@@ -983,7 +983,7 @@ export interface PaymentMethodTokenizationData {
  */
 export interface PaymentDataError {
   /**
-   * Predifined error reason
+   * Predefined error reason
    *
    * This field is required.
    */
@@ -1152,7 +1152,7 @@ type CardNetwork =
  *   reuse the credential across unrelated transactions.
  *
  * - `CRYPTOGRAM_3DS`:
- *   Authenticate using the a 3-D Secure (3DS) cryptogram.
+ *   Authenticate using the 3-D Secure (3DS) cryptogram.
  *
  *   Note: in addition to the 3DS cryptogram there will also be an
  *   associated PAN (personal account number), expiration month and year,
@@ -1184,7 +1184,7 @@ type CardAuthMethod = 'PAN_ONLY' | 'CRYPTOGRAM_3DS';
  *   - Address.name
  *   - Address.countryCode
  *   - Address.postalCode
- *   - Address.phoneNumberif BillingAddressParameters.phoneNumberRequired is set to `true`.
+ *   - Address.phoneNumber if BillingAddressParameters.phoneNumberRequired is set to `true`.
  *
  *   Note: some countries do not use postal codes. The postal code field
  *   will be empty in those countries.
@@ -1388,7 +1388,7 @@ type CallbackTrigger =
  *   cannot be charged.
  *
  * - `OTHER_ERROR`:
- *   A catch all for error not fitting anywhere else.
+ *   A catch-all for error not fitting anywhere else.
  */
 type ErrorReason =
   | 'SHIPPING_ADDRESS_INVALID'

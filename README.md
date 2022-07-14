@@ -1,6 +1,6 @@
 # @fresha/capacitor-plugin-googlepay
 
-This Google Pay plugin provides interfaces that allow you to initiate an Google Pay payment sheet based on provided PaymentOptions. When transaction is authorized, PaymentData response is returned along with payment details and more importantly- a payment token that you should pass to your backend.
+This Google Pay plugin provides interfaces that allow you to initiate a Google Pay payment sheet based on provided PaymentOptions. When transaction is authorized, PaymentData response is returned along with payment details and more importantly- a payment token that you should pass to your backend.
 
 The API is a subset of Google Pay for Web. Necessary typescript types has been extracted from [DefinitelyTyped/googlepay](https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/googlepay).
 
@@ -50,7 +50,7 @@ initialize(paymentOptions: PaymentOptions) => Promise<void>
 ```
 
 Initiates a Google Pay client along with environment configuration.
-This function should be called once- before using the plugin.
+This function should be called once: before using the plugin.
 
 | Param                | Type                                                      | Description                                                  |
 | -------------------- | --------------------------------------------------------- | ------------------------------------------------------------ |
@@ -486,7 +486,7 @@ Options:
   reuse the credential across unrelated transactions.
 
 - `CRYPTOGRAM_3DS`:
-  Authenticate using the a 3-D Secure (3DS) cryptogram.
+  Authenticate using the 3-D Secure (3DS) cryptogram.
 
   Note: in addition to the 3DS cryptogram there will also be an
   associated PAN (personal account number), expiration month and year,
@@ -589,7 +589,7 @@ Options:
   - <a href="#address">Address</a>.name
   - <a href="#address">Address</a>.countryCode
   - <a href="#address">Address</a>.postalCode
-  - <a href="#address">Address</a>.phoneNumberif <a href="#billingaddressparameters">BillingAddressParameters.phoneNumberRequired</a> is set to `true`.
+  - <a href="#address">Address</a>.phoneNumber if <a href="#billingaddressparameters">BillingAddressParameters.phoneNumberRequired</a> is set to `true`.
 
   Note: some countries do not use postal codes. The postal code field
   will be empty in those countries.
