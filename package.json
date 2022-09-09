@@ -35,11 +35,12 @@
     "eslint": "eslint . --ext ts",
     "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
     "docgen": "docgen --api GooglePayPlugin --output-readme README.md --output-json dist/docs.json",
-    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js",
+    "build": "npm run clean && npm run docgen && tsc && rollup -c rollup.config.js && npm run copy-ts-definitions",
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepare": "npm run build",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "copy-ts-definitions": "mkdir dist/types && cp types/* dist/types/"
   },
   "devDependencies": {
     "@capacitor/android": "^3.0.0",
