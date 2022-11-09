@@ -695,14 +695,6 @@ export interface CardParameters {
    * assumed.
    */
   billingAddressParameters?: BillingAddressParameters | undefined;
-
-  /**
-   * List of card network parameters.
-   *
-   * This field is optional. You may set it when network specific
-   * parameters are needed to complete a transaction.
-   */
-  cardNetworkParameters?: CardNetworkParameters[] | undefined;
 }
 
 /**
